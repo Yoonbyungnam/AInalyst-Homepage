@@ -1,4 +1,3 @@
-import columns as columns
 from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
@@ -21,7 +20,7 @@ def index(request):
     paginator = Paginator(columns_list, 20)  # 페이지당 20개씩 보여주기
     page_obj = paginator.get_page(page)
     context = {'columns_list': page_obj, 'page': page, 'kw': kw}
-    columns.author = request.user  # author 속성에 로그인 계정 저장
+    Columns.author = request.user  # author 속성에 로그인 계정 저장
     return render(request, 'AInalyst/columns_list.html', context)
 
 @login_required(login_url='common:login')
