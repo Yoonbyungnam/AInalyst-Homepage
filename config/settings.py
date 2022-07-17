@@ -27,10 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['43.200.47.206']
 STATIC_ROOT = BASE_DIR / 'static/'
-STATICFILES_DIRS = []
+
+
 
 # Application definition
-
 INSTALLED_APPS = [
     'common.apps.CommonConfig',
     'AInalyst.apps.AInalystConfig',
@@ -117,6 +117,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+STATICFILES_DIRS= []
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
