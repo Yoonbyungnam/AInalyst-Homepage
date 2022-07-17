@@ -134,6 +134,8 @@ LOGIN_REDIRECT_URL = '/'
 
 # 로그아웃시 이동하는 URL
 LOGOUT_REDIRECT_URL = '/'
+
+
 env = environ.Env()
 environ.Env.read_env(BASE_DIR / '.env')
 
